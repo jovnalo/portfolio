@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joveth Nalo</title>
+    <link rel="stylesheet" href="index.css" media="screen">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="././images/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top slideDown">
+        <div class="container"> <a class="navbar-brand" href="#">JVTH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"> <a class="nav-link" href="#hero">Intro</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#about">About</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#works">Works</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#contact">Contact</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="hero" class="section ">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-7 py-3 slideLeft">
+                    <p>Hello!</p>
+                    <h1>I'm Joveth, a web developer & graphic designer.</h1>
+                </div>
+                <div class="col-md-5 slideRight"> <img class="profileImg mx-auto d-block" src="./images/profile-img.png" alt="Profile Image"> </div>
+            </div>
+        </div>
+        <a class="scrollTo" href="#about"><img src="./images/scrollBtn.svg"></a>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container slideUp">
+            <div class="row padX">
+                <div class="col-md-12">
+                    <h2>About</h2>
+                    <p>Hello! I'm Bethoven Nalo, and I've been working as a front-end developer for the past 11 years. Starting out as a graphic designer, I discovered a passion for turning creative designs into functional websites. Now, I focus on converting
+                        designs into engaging web experiences. Explore my work and get in touch if you'd like to collaborate!</p>
+                </div>
+            </div>
+        </div>
+        <div class="container slideUp delayed">
+            <div class="row">
+                <div class="dottedBox">
+                    <h3>Skills</h3>
+                    <div class="skillsRow">
+                        <h4>Web development tools</h4>
+                        <div class="iconBox"> <img src="./images/icons/icon-html.svg">
+                            <p>HTML 5</p>
+                            <div class="meter lvl4"></div>
+                        </div>
+                        <div class="iconBox"> <img src="./images/icons/icon-css.svg">
+                            <p>CSS 3</p>
+                            <div class="meter lvl4"></div>
+                        </div>
+                        <div class="iconBox"> <img src="./images/icons/icon-bootstrap.svg">
+                            <p>Bootstrap</p>
+                            <div class="meter lvl4"></div>
+                        </div>
+                        <div class="iconBox"> <img src="./images/icons/icon-duda.svg">
+                            <p>Duda CMS</p>
+                            <div class="meter lvl4"></div>
+                        </div>
+                        <div class="iconBox"> <img src="./images/icons/icon-git.svg">
+                            <p>Git</p>
+                            <div class="meter lvl3"></div>
+                        </div>
+                        <div class="iconBox"> <img src="./images/icons/icon-js.svg">
+                            <p>Javascript</p>
+                            <div class="meter lvl2"></div>
+                        </div>
+                        <div class="iconBox"> <img src="./images/icons/icon-nodejs.svg">
+                            <p>Node.js</p>
+                            <div class="meter lvl1"></div>
+                        </div>
+                        <div class="iconBox"> <img src="./images/icons/icon-express.svg">
+                            <p>Express.js</p>
+                            <div class="meter lvl1"></div>
+                        </div>
+                        <div class="iconBox"> <img src="./images/icons/icon-react.svg">
+                            <p>React.js</p>
+                            <div class="meter lvl1"></div>
+                        </div>
+                        <div class="iconBox"> <img src="./images/icons/icon-mongodb.svg">
+                            <p>MongoDB</p>
+                            <div class="meter lvl1"></div>
+                        </div>
+                    </div>
+                    <div class="skillsRow mt-3">
+                        <h4>Design tools</h4>
+                        <div class="iconBox"> <img src="./images/icons/icon-ps.svg">
+                            <p>Photoshop</p>
+                            <div class="meter lvl4"></div>
+                        </div>
+                        <div class="iconBox"> <img src="./images/icons/icon-ai.svg">
+                            <p>Illustrator</p>
+                            <div class="meter lvl3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Works Section - Responsive web build -->
+    <section id="works" class="section">
+        <div class="container slideUp">
+            <div class="row padX">
+                <div class="col-md-12">
+                    <h2 class="dotted">Works</h2>
+                    <p>Here are some of the projects I’ve worked on. Feel free to explore them and see the work I’ve put into each one.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- Responsive web build  -->
+                <div class="dottedBox slideUp delayed">
+                    <h3>Responsive Websites</h3>
+                    <div class="lightBox">
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/rw-01_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal-rw-1">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal-rw-1" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky"> <a href="https://www.ace-scaffolding.co.uk" class="btn btn-dark btn-sm" target="_blank" title="Actual page may have been updated or redesigned." title="Actual page may have been updated or redesigned.">Visit page</a>
+                                            <button type="button" class="btn modalCloseBtn" data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- image carousel -->
+                                            <div id="imgCarousel-rw-1" class="carousel slide" data-bs-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active"> <img src="./images/works/rw-01_lg.jpg" class="d-block w-100" alt="First Slide"> </div>
+                                                    <div class="carousel-item"> <img src="./images/works/rw-01.jpg" class="d-block w-100" alt="Second Slide"> </div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#imgCarousel-rw-4" data-bs-slide="prev"> <span class="carousel-control-prev-icon"></span> </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#imgCarousel-rw-1" data-bs-slide="next"> <span class="carousel-control-next-icon"></span> </button>
+                                            </div>
+                                            <!-- image carousel END -->
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/rw-02_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal-rw-2">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal-rw-2" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky"> <a href="https://www.thoroughbreddoors.co.uk/" class="btn btn-dark btn-sm" target="_blank" title="Actual page may have been updated or redesigned." title="Actual page may have been updated or redesigned.">Visit page</a>
+                                            <button type="button" class="btn modalCloseBtn" data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- image carousel -->
+                                            <div id="imgCarousel-rw-2" class="carousel slide" data-bs-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active"> <img src="./images/works/rw-02_lg.jpg" class="d-block w-100" alt="First Slide"> </div>
+                                                    <div class="carousel-item"> <img src="./images/works/rw-02.jpg" class="d-block w-100" alt="Second Slide"> </div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#imgCarousel-rw-2" data-bs-slide="prev"> <span class="carousel-control-prev-icon"></span> </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#imgCarousel-rw-2" data-bs-slide="next"> <span class="carousel-control-next-icon"></span> </button>
+                                            </div>
+                                            <!-- image carousel END -->
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/rw-03_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal-rw-3">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal-rw-3" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky"> <a href="https://www.garudaa.co.uk/" class="btn btn-dark btn-sm" target="_blank" title="Actual page may have been updated or redesigned." title="Actual page may have been updated or redesigned.">Visit page</a>
+                                            <button
+                                            type="button" class="btn modalCloseBtn" data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- image carousel -->
+                                            <div id="imgCarousel-rw-3" class="carousel slide" data-bs-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active"> <img src="./images/works/rw-03_lg.jpg" class="d-block w-100" alt="First Slide"> </div>
+                                                    <div class="carousel-item"> <img src="./images/works/rw-03.jpg" class="d-block w-100" alt="Second Slide"> </div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#imgCarousel-rw-3" data-bs-slide="prev"> <span class="carousel-control-prev-icon"></span> </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#imgCarousel-rw-3" data-bs-slide="next"> <span class="carousel-control-next-icon"></span> </button>
+                                            </div>
+                                            <!-- image carousel END -->
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/rw-04_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal-rw-4">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal-rw-4" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky"> <a href="https://www.crs-malvern.co.uk/" class="btn btn-dark btn-sm" target="_blank" title="Actual page may have been updated or redesigned." title="Actual page may have been updated or redesigned.">Visit page</a>
+                                            <button type="button" class="btn modalCloseBtn" data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- image carousel -->
+                                            <div id="imgCarousel-rw-4" class="carousel slide" data-bs-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active"> <img src="./images/works/rw-04_lg.jpg" class="d-block w-100" alt="First Slide"> </div>
+                                                    <div class="carousel-item"> <img src="./images/works/rw-04.jpg" class="d-block w-100" alt="Second Slide"> </div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#imgCarousel-rw-4" data-bs-slide="prev"> <span class="carousel-control-prev-icon"></span> </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#imgCarousel-rw-4" data-bs-slide="next"> <span class="carousel-control-next-icon"></span> </button>
+                                            </div>
+                                            <!-- image carousel END -->
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/rw-05_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal-rw-5">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal-rw-5" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky">
+                                            <button type="button" class="btn modalCloseBtn" data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body"> <img src="./images/works/rw-05.jpg" class="img-fluid"> </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/rw-06_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal-rw-6">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal-rw-6" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky">
+                                            <button type="button" class="btn modalCloseBtn" data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body"> <img src="./images/works/rw-06.jpg" class="img-fluid"> </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/rw-07_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal-rw-7">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal-rw-7" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky">
+                                            <button type="button" class="btn modalCloseBtn" data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body"> <img src="./images/works/rw-07.jpg" class="img-fluid"> </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/rw-08_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal-rw-8">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal-rw-8" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky">
+                                            <button type="button" class="btn modalCloseBtn" data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body"> <img src="./images/works/rw-08.jpg" class="img-fluid"> </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Works Section - landing pages -->
+    <section class="section">
+        <div class="container slideUp">
+            <div class="row">
+                <!-- Landing pages -->
+                <div class="dottedBox slideUp delayed">
+                    <h3>Landing pages</h3>
+                    <div class="lightBox">
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/lp-01_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal1">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal1" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky"> <a href="https://ouritnews.com/content-preview/en/bltd2d98a98825a3906" class="btn btn-dark btn-sm" target="_blank" title="Actual page may have been updated or redesigned.">Visit page</a>
+                                            <button type="button" class="btn modalCloseBtn"
+                                            data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body"> <img src="./images/works/lp-01.jpg" class="img-fluid"> </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/lp-02_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal2">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal2" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky"> <a href="https://ouritnews.com/content-preview/en/blt620811b977867e4d" class="btn btn-dark btn-sm" target="_blank" title="Actual page may have been updated or redesigned.">Visit page</a>
+                                            <button type="button" class="btn modalCloseBtn"
+                                            data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body"> <img src="./images/works/lp-02.jpg" class="img-fluid"> </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/lp-03_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal3">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal3" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky"> <a href="https://ouritnews.com/content-preview/en/blt474515ca416e6731" class="btn btn-dark btn-sm" target="_blank" title="Actual page may have been updated or redesigned.">Visit page</a>
+                                            <button type="button" class="btn modalCloseBtn"
+                                            data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body"> <img src="./images/works/lp-03.jpg" class="img-fluid"> </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/lp-04_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal4">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal4" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky"> <a href="https://ouritnews.com/content-preview/en/bltfb7eb9cddfcbf112" class="btn btn-dark btn-sm" target="_blank" title="Actual page may have been updated or redesigned.">Visit page</a>
+                                            <button type="button" class="btn modalCloseBtn"
+                                            data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body"> <img src="./images/works/lp-04.jpg" class="img-fluid"> </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/lp-05_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal5">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal5" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky"> <a href="https://ouritnews.com/content-preview/en/blt46ad7f5f53775045" class="btn btn-dark btn-sm" target="_blank" title="Actual page may have been updated or redesigned.">Visit page</a>
+                                            <button type="button" class="btn modalCloseBtn"
+                                            data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body"> <img src="./images/works/lp-05.jpg" class="img-fluid"> </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/lp-06_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal6">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal6" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky"> <a href="https://ouritnews.com/content-preview/en/bltb940197ec0142ca1" class="btn btn-dark btn-sm" target="_blank" title="Actual page may have been updated or redesigned.">Visit page</a>
+                                            <button type="button" class="btn modalCloseBtn"
+                                            data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body"> <img src="./images/works/lp-06.jpg" class="img-fluid"> </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/lp-07_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal7">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal7" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky"> <a href="https://ouritnews.com/content-preview/en/bltdbd717683683812a" class="btn btn-dark btn-sm" target="_blank" title="Actual page may have been updated or redesigned.">Visit page</a>
+                                            <button type="button" class="btn modalCloseBtn"
+                                            data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body"> <img src="./images/works/lp-07.jpg" class="img-fluid"> </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                        <!-- Card -->
+                        <div class="lightboxCard">
+                            <!--Lightbox Modal thumb -->
+                            <div> <img src="./images/works/lp-08_thumb.jpg" class="img-thumb" data-bs-toggle="modal" data-bs-target="#lightboxModal8">
+                                <p class="thumbDesc">Short Description here</p>
+                            </div>
+                            <!-- Lightbox Modal -->
+                            <div class="modal fade" id="lightboxModal8" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header Sticky"> <a href="https://ouritnews.com/content-preview/en/blt31c276aa8b0bd15e" class="btn btn-dark btn-sm" target="_blank" title="Actual page may have been updated or redesigned.">Visit page</a>
+                                            <button type="button" class="btn modalCloseBtn"
+                                            data-bs-dismiss="modal">X</button>
+                                        </div>
+                                        <div class="modal-body"> <img src="./images/works/lp-08.jpg" class="img-fluid"> </div>
+                                        <div class="modal-footer">
+                                            <p>content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Works Section - graphic design -->
+    <section class="section" style="margin-bottom: 40px;">
+        <div class="container slideUp">
+            <div class="row">
+                <div class="dottedBox slideUp">
+                    <h3>Graphic design</h3>
+                    <p>If you're interested in seeing my graphic design works, feel free to check out my<a class="behanceLink" href="https://www.behance.net/jonalo" target="_blank">Bēhance portfolio</a>page.</p>
+                </div>
+            </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="dotted mb-4">Let's talk</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 p-3">
+                    <h3>Get in contact</h3>
+                    <p><span>E-mail:</span> <a href="mailto:joc.nalo@gmail.com">joc.nalo@gmail.com</a></p>
+                    <p><span>Mobile:</span> <a href="tel:+639988628440">+639988628440</a></p>
+                </div>
+                <div class="col-md-4 p-3">
+                    <h3>Social</h3>
+                    <p><a href="https://www.linkedin.com/in/bcnalo/" target="_blank">LinkedIn</a>, <a href="https://github.com/jovnalo" target="_blank" style="pointer-events: none;">Github</a>, <a href="https://www.facebook.com/joveth.nalo" target="_blank">Facebook</a></p>
+                </div>
+                <div class="col-md-4 p-3">
+                    <a class="resumeButton" href="./files/Bethoven-Nalo_Resume.pdf" download="Bethoven-Nalo_Resume.pdf" target="_blank">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="row mt-5 text-center">
+                <a class="scrollTo backTop" href="#"><img src="./images/scrollBtn.svg"></a>
+                <p style="text-align: center; font-size: .8rem; color: #9d9d9d;">© Copyright Joveth 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
