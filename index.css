@@ -33,7 +33,7 @@ body .navbar .nav-link {
 
 html body {
     /*background-color: #121212;*/
-    background: url(images/body-bg.jpg) no-repeat center / cover fixed;
+    background: #0a0a0a url(images/body-bg.jpg) no-repeat center / cover fixed;
     color: #fff;
     font-family: "Montserrat", sans-serif;
 }
@@ -188,6 +188,7 @@ html body {
     transition: all 0.3s ease;
     /*opacity: 0;
     visibility: hidden;*/
+    display: none;
 }
 
 .iconBox .meter:before {
