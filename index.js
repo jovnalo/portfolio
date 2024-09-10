@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // row animation trigger
+    // Row animation trigger
     const sections = document.querySelectorAll('.section');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // nav link active state
+    // Nav link active state
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
     window.addEventListener('scroll', () => {
@@ -34,6 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Scroll without showing anchor in the address bar
+    document.querySelectorAll('.scrollLink').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
 });
-
-
