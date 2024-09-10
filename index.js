@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', () => {
         let current = '';
+        const scrollPosition = window.pageYOffset + window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
@@ -27,6 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        if (scrollPosition >= documentHeight - 2) {
+            current = sections[sections.length - 1].getAttribute('id');
+        }
+
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
@@ -35,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth scroll without showing anchor in the address bar
+    // Scroll without showing anchor in the address bar
     document.querySelectorAll('.scrollLink').forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
