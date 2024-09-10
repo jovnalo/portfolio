@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Scroll without showing anchor in the address bar
+    // Smooth scroll without showing anchor in the address bar
     document.querySelectorAll('.scrollLink').forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth' });
+                history.replaceState(null, null, ' ');
             }
         });
     });
