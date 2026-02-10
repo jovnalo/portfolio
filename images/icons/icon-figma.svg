@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 128 128">
+  <!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #09cf83;
+      }
+
+      .st0, .st1, .st2, .st3 {
+        fill-rule: evenodd;
+      }
+
+      .st1 {
+        fill: #ff7262;
+      }
+
+      .st4 {
+        fill: #19bcfe;
+      }
+
+      .st2 {
+        fill: #f24e1e;
+      }
+
+      .st3 {
+        fill: #a259ff;
+      }
+    </style>
+  </defs>
+  <circle class="st4" cx="84.83" cy="64" r="20.83"/>
+  <path class="st0" d="M43.17,126.5c11.51,0,20.83-9.33,20.83-20.83v-20.83h-20.83c-11.51,0-20.83,9.33-20.83,20.83s9.33,20.83,20.83,20.83Z"/>
+  <path class="st3" d="M43.17,84.83h20.83v-41.67h-20.83c-11.51,0-20.83,9.33-20.83,20.83s9.33,20.83,20.83,20.83Z"/>
+  <path class="st2" d="M43.17,43.17h20.83V1.5h-20.83c-11.51,0-20.83,9.33-20.83,20.83s9.33,20.83,20.83,20.83Z"/>
+  <path class="st1" d="M84.83,43.17h-20.83V1.5h20.83c11.51,0,20.83,9.33,20.83,20.83s-9.33,20.83-20.83,20.83Z"/>
+</svg>
