@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', function () {
+  /* ===============================
+     View More / View Less Toggle
+     for Design and Web Development sections
+  =============================== */
+  document.querySelectorAll('.viewMore button').forEach(button => {
+    const btnText = button.querySelector('.btn-text');
+    const btnArrow = button.querySelector('.btn-arrow');
+    const targetId = button.getAttribute('data-bs-target');
+    const collapseEl = document.querySelector(targetId);
+
+    // Add fade-collapse class for smooth effect (optional)
+    collapseEl.classList.add('fade-collapse');
+
+    collapseEl.addEventListener('shown.bs.collapse', () => {
+      btnText.textContent = 'View Less';
+      btnArrow.innerHTML = '&#9652;'; // up arrow
+      // Scroll to make newly opened content visible
+      collapseEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    collapseEl.addEventListener('hidden.bs.collapse', () => {
+      btnText.textContent = 'View More';
+      btnArrow.innerHTML = '&#9662;'; // down arrow
+      // Scroll back to button
+      button.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  });
 
   /* ===============================
      Section Animation Trigger
