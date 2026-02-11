@@ -1,3 +1,7 @@
+.padTop {
+    padding-top: 20px !important;
+}
+
 div#moreWorks {
     margin-top: 20px;
 }
@@ -51,9 +55,10 @@ figure.lightbox-trigger > div > img {
     outline: 1px solid #eeeeee;
 }
 
-.webDev figure.lightbox-trigger > div > img {
+figure.lightbox-trigger > div > img.tOp {
     object-position: top;
 }
+
 
 figure.lightbox-trigger {
     background: #fff;
@@ -648,7 +653,16 @@ a.resumeButton:hover {
     .scrollTo {
         bottom: 0;
     }
+    .padTop {
+        padding-top: 0 !important;
+    }
+
+    div.dottedBox {
+        padding: 60px 10px 40px;
+    }
+
 }
+
 @media (min-width: 575px) and (max-width: 991px) {
     .iconBox {
         /* margin: 30px;*/
