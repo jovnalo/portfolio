@@ -1,7 +1,32 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+  /* ===============================
+     Lightbox Trigger for Visit Page
+  =============================== */
+  const lightboxFigures = document.querySelectorAll('.lightbox-trigger');
+  const previewNote = document.getElementById('previewNote');
+  const livePreviewBtn = document.querySelector('.livePreviewBtn');
+
+  lightboxFigures.forEach(figure => {
+    figure.addEventListener('click', () => {
+      const link = figure.getAttribute('data-link');
+      
+      if (link && link.trim() !== '') {
+        livePreviewBtn.classList.remove('d-none');
+        livePreviewBtn.setAttribute('href', link);
+
+        if (previewNote) previewNote.classList.remove('d-none'); // show note only if button visible
+      } else {
+        livePreviewBtn.classList.add('d-none');
+        livePreviewBtn.removeAttribute('href');
+
+        if (previewNote) previewNote.classList.add('d-none'); // hide note
+      }
+    });
+  });
+
   /* ===============================
      View More / View Less Toggle
-     for Design and Web Development sections
   =============================== */
   document.querySelectorAll('.viewMore button').forEach(button => {
     const btnText = button.querySelector('.btn-text');
@@ -9,20 +34,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const targetId = button.getAttribute('data-bs-target');
     const collapseEl = document.querySelector(targetId);
 
-    // Add fade-collapse class for smooth effect (optional)
+    if (!collapseEl) return;
+
     collapseEl.classList.add('fade-collapse');
 
     collapseEl.addEventListener('shown.bs.collapse', () => {
-      btnText.textContent = 'View Less';
-      btnArrow.innerHTML = '&#9652;'; // up arrow
-      // Scroll to make newly opened content visible
+      if (btnText) btnText.textContent = 'View Less';
+      if (btnArrow) btnArrow.innerHTML = '&#9652;';
       collapseEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 
     collapseEl.addEventListener('hidden.bs.collapse', () => {
-      btnText.textContent = 'View More';
-      btnArrow.innerHTML = '&#9662;'; // down arrow
-      // Scroll back to button
+      if (btnText) btnText.textContent = 'View More';
+      if (btnArrow) btnArrow.innerHTML = '&#9662;';
       button.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   });
@@ -31,17 +55,20 @@ document.addEventListener('DOMContentLoaded', function () {
      Section Animation Trigger
   =============================== */
   const sections = document.querySelectorAll('.section');
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) entry.target.classList.add('visible');
     });
   }, { threshold: 0.1 });
+
   sections.forEach(section => observer.observe(section));
 
   /* ===============================
-     Nav Link Active State on Scroll
+     Nav Active State
   =============================== */
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
   window.addEventListener('scroll', () => {
     let current = '';
     const scrollPosition = window.pageYOffset + window.innerHeight;
@@ -56,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     if (scrollPosition >= documentHeight - 2) {
-      current = sections[sections.length - 1].getAttribute('id');
+      current = sections[sections.length - 1]?.getAttribute('id');
     }
 
     navLinks.forEach(link => {
@@ -66,12 +93,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* ===============================
-     Smooth Scroll (No URL Hash)
+     Smooth Scroll
   =============================== */
   document.querySelectorAll('.scrollLink').forEach(link => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
+      const targetId = this.getAttribute('href')?.substring(1);
       const target = document.getElementById(targetId);
       if (target) target.scrollIntoView({ behavior: 'smooth' });
       history.replaceState(null, null, ' ');
@@ -79,114 +106,103 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* ===============================
-     Lightbox Modal Carousel
-     - Fade effect
-     - Autoplay starts after first thumb click
+     Lightbox Modal + Carousel
   =============================== */
-  document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
-    trigger.addEventListener('click', () => {
+  const triggers = document.querySelectorAll('.lightbox-trigger');
+  const modal = document.getElementById('lightboxModal');
 
-      const modal = document.getElementById('lightboxModal');
-      const titleEl = modal.querySelector('.modal-title');
-      const carouselEl = modal.querySelector('#lightboxCarousel');
-      const carouselInner = carouselEl.querySelector('.carousel-inner');
-      const thumbs = modal.querySelector('.lightbox-thumbs');
+  if (modal) {
+    const modalTitle = modal.querySelector('.modal-title');
+    const carouselEl = modal.querySelector('#lightboxCarousel');
+    const carouselInner = modal.querySelector('.carousel-inner');
+    const thumbs = modal.querySelector('.lightbox-thumbs');
+    const liveBtn = modal.querySelector('.livePreviewBtn');
 
-      const title = trigger.dataset.title || '';
-      const images = trigger.dataset.images.split(',');
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const title = trigger.dataset.title || '';
+        const images = trigger.dataset.images?.split(',') || [];
+        const link = trigger.dataset.link || '';
 
-      // Reset modal content
-      titleEl.textContent = title;
-      carouselInner.innerHTML = '';
-      thumbs.innerHTML = '';
+        if (modalTitle) modalTitle.textContent = title;
+        if (carouselInner) carouselInner.innerHTML = '';
+        if (thumbs) thumbs.innerHTML = '';
 
-      // Build slides and thumbnails
-      images.forEach((src, index) => {
+        images.forEach((src, index) => {
+          const cleanSrc = src.trim();
 
-        // Slide
-        const slide = document.createElement('div');
-        slide.className = `carousel-item ${index === 0 ? 'active' : ''}`;
-        slide.innerHTML = `<img src="${src.trim()}" class="d-block w-100 rounded">`;
-        carouselInner.appendChild(slide);
+          /* Slide */
+          const slide = document.createElement('div');
+          slide.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+          slide.innerHTML = `<img src="${cleanSrc}" class="d-block w-100 rounded">`;
+          carouselInner.appendChild(slide);
 
-        // Thumbnail
-        const thumb = document.createElement('img');
-        thumb.src = src.trim();
-        thumb.className = `thumb mx-1 ${index === 0 ? 'active' : ''}`;
-        thumb.dataset.bsTarget = '#lightboxCarousel';
-        thumb.dataset.bsSlideTo = index;
-
-        thumb.addEventListener('click', () => {
-          thumbs.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
-          thumb.classList.add('active');
-
-          // Start autoplay on first click
-          const carouselInstance = bootstrap.Carousel.getInstance(carouselEl);
-          if (carouselInstance) carouselInstance.cycle();
+          /* Thumbnail */
+          if (thumbs) {
+            const thumb = document.createElement('img');
+            thumb.src = cleanSrc;
+            thumb.className = `thumb mx-1 ${index === 0 ? 'active' : ''}`;
+            thumb.dataset.bsSlideTo = index;
+            thumbs.appendChild(thumb);
+          }
         });
 
-        thumbs.appendChild(thumb);
-      });
+        /* Live Preview Button + Note */
+        if (liveBtn) {
+          if (link.trim() !== '') {
+            liveBtn.href = link;
+            liveBtn.classList.remove('d-none');
+            if (previewNote) previewNote.classList.remove('d-none');
+          } else {
+            liveBtn.classList.add('d-none');
+            liveBtn.removeAttribute('href');
+            if (previewNote) previewNote.classList.add('d-none');
+          }
+        }
 
-      // Dispose existing carousel instance if any
-      const existing = bootstrap.Carousel.getInstance(carouselEl);
-      if (existing) existing.dispose();
+        /* Reset Carousel Instance */
+        const existing = bootstrap.Carousel.getInstance(carouselEl);
+        if (existing) existing.dispose();
 
-      // Add fade class
-      carouselEl.classList.add('carousel-fade');
+        carouselEl.classList.add('carousel-fade');
 
-      // Initialize carousel WITHOUT autoplay
-      new bootstrap.Carousel(carouselEl, {
-        interval: 3000,
-        ride: false,
-        pause: 'hover',
-        wrap: true
+        const carousel = new bootstrap.Carousel(carouselEl, {
+          interval: 3000,
+          ride: 'carousel', // autoplay enabled
+          pause: 'hover',
+          wrap: true
+        });
+
+        /* Thumbnails click handler */
+        if (thumbs) {
+          thumbs.querySelectorAll('.thumb').forEach(thumb => {
+            thumb.addEventListener('click', () => {
+              thumbs.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+              thumb.classList.add('active');
+              const index = parseInt(thumb.dataset.bsSlideTo, 10);
+              carousel.to(index); // go to slide without breaking autoplay
+            });
+          });
+        }
+
+        /* Stop autoplay on modal close */
+        modal.addEventListener('hidden.bs.modal', () => {
+          carousel.pause();
+        });
       });
     });
-  });
-
-  // Stop autoplay when modal closes
-  const lightboxModal = document.getElementById('lightboxModal');
-  lightboxModal.addEventListener('hidden.bs.modal', () => {
-    const carousel = bootstrap.Carousel.getInstance(
-      document.getElementById('lightboxCarousel')
-    );
-    if (carousel) carousel.pause();
-  });
+  }
 
   /* ===============================
-     Bootstrap Collapse – Ensure Reliable Toggle
+     Reliable Collapse Toggle
   =============================== */
   document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(btn => {
     btn.addEventListener('click', function () {
       const target = document.querySelector(btn.dataset.bsTarget);
+      if (!target) return;
       const bsCollapse = bootstrap.Collapse.getOrCreateInstance(target);
       bsCollapse.toggle();
     });
-  });
-
-  /* ===============================
-     View More / View Less Toggle
-     with fade animation
-  =============================== */
-  const moreWorks = document.getElementById('moreWorks');
-  const toggleBtn = document.getElementById('toggleWorksBtn');
-  const btnText = toggleBtn.querySelector('.btn-text');
-  const btnArrow = toggleBtn.querySelector('.btn-arrow');
-
-  // Add fade-collapse class
-  moreWorks.classList.add('fade-collapse');
-
-  moreWorks.addEventListener('shown.bs.collapse', () => {
-    btnText.textContent = 'View Less';
-    btnArrow.classList.add('rotate');
-    moreWorks.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-
-  moreWorks.addEventListener('hidden.bs.collapse', () => {
-    btnText.textContent = 'View More';
-    btnArrow.classList.remove('rotate');
-    toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 
 });
