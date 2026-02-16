@@ -99,11 +99,13 @@ figure.lightbox-trigger figcaption > span:last-child {
     display: inline-block;
     background: rgba(0, 0, 0, .5);
     border-radius: 5px;
-    padding: 2px 10px;
+    padding: 4px 12px;
     font-size: .7rem;
     color: #d4d4d4;
     margin-bottom: 10px;
+    line-height: .8rem;
 }
+
 
 /* lightbox modal END */
 
@@ -162,6 +164,18 @@ figure.lightbox-trigger figcaption > span:last-child {
 .thumb:hover {
   opacity: 1;
   border-color: #fff;
+}
+
+.carousel a.btn.btn-sm {
+    font-size: .7rem;
+    padding: 5px 20px;
+}
+
+#previewNote {
+    color: #fff !important;
+    text-align: center;
+    font-size: .65rem;
+    margin: 10px auto !important;
 }
 
 
@@ -735,6 +749,19 @@ a.resumeButton:hover {
         color: #2d2d2d;
         line-height: 1.2rem;
         margin-bottom: 8px;
+    }
+
+/*    .modal-content .lightbox-thumbs {
+        overflow-x: auto;
+    }*/
+
+    .d-flex.justify-content-center.mt-3.lightbox-thumbs {
+        display: block !important;
+        text-align: center;
+    }
+
+    .lightbox-thumbs img.thumb.mx-1 {
+        margin-bottom: 10px !important;
     }
 }
 
