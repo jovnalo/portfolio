@@ -2,8 +2,8 @@
     padding-top: 20px !important;
 }
 
-div#moreWorks {
-    margin-top: 20px;
+div#moreDesignWorks, div#moreWebWorks {
+    margin-top: 20px !important;
 }
 
 .collapse {
@@ -737,3 +737,4 @@ a.resumeButton:hover {
         margin-bottom: 8px;
     }
 }
+
